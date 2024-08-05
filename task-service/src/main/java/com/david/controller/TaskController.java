@@ -59,13 +59,13 @@ public class TaskController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Task> updateTask(@PathVariable Long id, @PathVariable Task req, @RequestHeader("Authorization") String jwt) throws Exception {
+    public ResponseEntity<Task> updateTask(@PathVariable Long id, @RequestBody Task req, @RequestHeader("Authorization") String jwt) throws Exception {
         UserDto user = userService.getUserProfile(jwt);
         Task tasks = taskService.updateTask(id, req, user.getId());
         return new ResponseEntity<>(tasks, HttpStatus.OK);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{id}/complete")
     public ResponseEntity<Task> completeTask(@PathVariable Long id) throws Exception {
         Task tasks = taskService.completeTask(id);
         return new ResponseEntity<>(tasks, HttpStatus.OK);
