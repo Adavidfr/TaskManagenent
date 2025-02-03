@@ -60,8 +60,8 @@ public class TaskServiceImpl implements TaskService {
             existingTask.setStatus(updatedTask.getStatus());
         }
 
-        if (updatedTask.getDeadLine() != null) {
-            existingTask.setDeadLine(updatedTask.getDeadLine());
+        if (updatedTask.getDeadline() != null) {
+            existingTask.setDeadline(updatedTask.getDeadline());
         }
 
         return taskRepository.save(existingTask);

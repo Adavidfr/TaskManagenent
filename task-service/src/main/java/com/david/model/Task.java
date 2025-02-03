@@ -1,9 +1,6 @@
 package com.david.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,11 +27,12 @@ public class Task {
 
     private Long assignedUserId;
 
+    @ElementCollection
     private List<String> tags = new ArrayList<>();
 
     private TaskStatus status;
 
-    private LocalDateTime deadLine;
+    private LocalDateTime deadline;
 
     private LocalDateTime createdAt;
 
