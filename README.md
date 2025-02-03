@@ -6,24 +6,24 @@ Task-Management es un sistema de administración de tareas desarrollado utilizan
 
 Este proyecto consta de los siguientes microservicios:
 
-### 1. **eureka-server**
+### 1. **Eureka-server**
 - **Descripción**: Este servicio actúa como el servidor de descubrimiento de servicios utilizando Eureka, permitiendo que los servicios se registren y encuentren entre sí.
-- **Puertos**: 8761 (por defecto para Eureka Server)
+- **Puertos**: 8083
 
-### 2. **gateway**
+### 2. **Gateway**
 - **Descripción**: El Gateway es responsable de enrutar todas las peticiones entre los diferentes servicios. Funciona como un punto único de entrada para todas las solicitudes, facilitando el enrutamiento hacia los servicios adecuados.
-- **Puertos**: 8080 (por defecto para el Gateway)
+- **Puertos**: 5000
 
-### 3. **task-service**
+### 3. **Task-service**
 - **Descripción**: Este servicio maneja todas las funcionalidades relacionadas con las tareas, como crear, editar, buscar y asignar tareas.
 - **Funciones principales**:
     - Crear tareas
     - Editar tareas
     - Buscar tareas
     - Asignar tareas
-- **Puertos**: 8081 (puerto configurable para el servicio de tareas)
+- **Puertos**: 8081
 
-### 4. **task-submission-service**
+### 4. **Task-submission-service**
 - **Descripción**: Este servicio maneja las funcionalidades relacionadas con las presentaciones de tareas. Permite a los usuarios enviar tareas, obtener las presentaciones de tareas y aceptar o rechazar presentaciones.
 - **Funciones principales**:
     - Enviar tareas (`submitTask`)
@@ -37,7 +37,7 @@ Este proyecto consta de los siguientes microservicios:
     - Registro de usuarios
     - Inicio de sesión
     - Asignación de roles (usuario o administrador)
-- **Puertos**: 8083 (puerto configurable para el servicio de usuarios)
+- **Puertos**: 8080
 
 ## Requisitos
 
